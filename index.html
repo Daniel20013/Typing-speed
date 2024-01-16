@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing speed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Typing speed</h1>
+        <button id="start" onclick="main()">Start test</button>
+        <p id="countdownTimer"></p>
+        <div class="timer">
+            <p id="chooseAnOption">Choose an option</p>
+            <button id="firstOption" onclick="firstOption()">1 minute</button>
+            <button id="secoundOption" onclick="secoundOption()">2 minutes</button>
+            <button id="thirdOption" onclick="thirdOption()">3 minutes</button>
+        </div>
+        <input id="inputText" type="text" placeholder="Enter the text">
+        <div id="textOutput"></div>
+        <button id="endTheTest" onclick="stopButton()">End the test</button>
+        <div class="endOfTheTest">
+        </div>
+        <button id="restart" onclick="restart()">Restart</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
