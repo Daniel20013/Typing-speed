@@ -1,0 +1,175 @@
+.container {
+    height: 54rem;
+    width: 96rem;
+    background-color: rgb(230, 230, 230);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#title {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    font-size: 3rem;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+start:active {
+    background-color: var(--button-active-background);
+}
+
+#countdownTimer {
+    font-size: 5rem;
+    border: 1px solid aqua;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    background-color: yellow;
+    position: absolute;
+    top: -5%;
+    left: 2%;
+    padding: 2rem;
+    display: none;
+}
+
+#firstOption {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+#secoundOption {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+#thirdOption {
+    position: absolute;
+    top: 15%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+#chooseAnOption {
+    position: absolute;
+    top: -1%;
+    left: 8%;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#inputText {
+    position: absolute;
+    left: 50%;
+    top: 1%;
+    transform: translate(-50%);
+    font-size: 2rem;
+    border-color: aqua;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+#textOutput {
+    border: 2px solid aqua;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 51.5%;
+    transform: translate(-50%, -48.5%);
+    height: 49rem;
+    width: 65rem;
+    font-size: 3rem;
+    display: none;
+    border-color: aqua;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+#endTheTest {
+    position: absolute;
+    top: 93%;
+    right: 2%;
+    background-color: aqua;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: none;
+}
+
+endTheTest:active {
+    background-color: var(--button-active-background);
+}
+
+.endOfTheTest {
+    border: 2px solid aqua;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 51.5%;
+    transform: translate(-50%, -48.5%);
+    height: 41rem;
+    width: 20rem;
+    font-size: 2rem;
+    display: none;
+    border-color: aqua;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#restart {
+    position: absolute;
+    top: 8%;
+    left: 52.5%;
+    transform: translate(-92%, -47.5%);
+    background-color: aqua;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: none;
+}
+
+restrt:active {
+    background-color: var(--button-active-background);
+}
