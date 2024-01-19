@@ -11,7 +11,6 @@ let time = defaultTime;
 countdownTimer.textContent = defaultTime;
 let restartTime;
 let timerID;
-let textForTesting;
 let traversedLetters = -1;
 let keysPressed = 0;
 let correctKeys = 0;
@@ -41,6 +40,14 @@ function creatingParagraphsEndTest(text, number) {
     endOfTheTest.appendChild(paragraphs);
 }
 
+function countingWords() {
+    if (forCountingWords === true) {
+        ++correctWords;
+    } else {
+        ++incorrectWords;
+    }
+}
+
 function stopTheTest() {
     if (allCharacters[allCharacters.length - 1] != " " && writtenWords >= 1) {
         countingWords();
@@ -66,14 +73,6 @@ function stopTheTest() {
     creatingParagraphsEndTest("Incorrect words: ", incorrectWords);
 }
 
-function countingWords() {
-    if (forCountingWords === true) {
-        ++correctWords;
-    } else {
-        ++incorrectWords;
-    }
-}
-
 function stopButton() {
     time = 0;
 }
@@ -89,29 +88,6 @@ function compareCharacters() {
     }
 }
 
-
-inputText.addEventListener("input", function() {
-    let inputValue = inputText.value
-    let forComparingChar = 2;
-    allCharacters = inputValue;
-    if ((!(/[a-zA-Z]/g.test(allCharacters[allCharacters.length - 1])) && !(/[a-zA-Z]/g.test(allCharacters[allCharacters.length - forComparingChar])))) {
-        inputText.value = "";
-        ++writtenWords;
-        countingWords();
-        forCountingWords = true;
-    }
-    ++traversedLetters;
-    ++keysPressed;
-    compareCharacters();
-});
-
-document.addEventListener("keydown", function(event) {
-    let deleteALetter = 2;
-    if (event.key === "Backspace") {
-        traversedLetters -= deleteALetter;
-    }
-});
-
 function textSelection() {
     let indexText;  
     indexText = Math.floor(Math.random() * testTexts.length);
@@ -121,6 +97,23 @@ function textSelection() {
         textOutput.appendChild(spans[i]);
     }
 }
+
+inputText.addEventListener("input", function() {
+    let inputValue = inputText.value
+    allCharacters = inputValue;
+    ++traversedLetters;
+    ++keysPressed;
+    compareCharacters();
+    if ((allCharacters[allCharacters.length - 1]) === " ") {
+        inputText.value = "";
+    }
+    let forComparingChar = 2;
+    if ((!(/[a-zA-Z]/g.test(allCharacters[allCharacters.length - 1]))) && allCharacters[allCharacters.length - forComparingChar].match(/[a-zA-Z]/)) {
+        ++writtenWords;
+        countingWords();
+        forCountingWords = true;
+    }
+});
 
 function pad(value) {
     const theNamberOfDigits = 2;
@@ -168,8 +161,8 @@ function main() {
     inputText.focus();
     textOutput.style.display = "block";
     endTheTest.style.display = "block";
-    countdownTimerFun();
     textSelection();
+    countdownTimerFun();
 }
 
 function restart() {
@@ -177,6 +170,7 @@ function restart() {
     endOfTheTest.style.display = "none";
     timer.style.display = "block";
     start.style.display = "block";
+    countdownTimer.textContent = restartTime;
     time = restartTime;
     traversedLetters = -1;
     keysPressed = 0;
@@ -191,5 +185,4 @@ function restart() {
     textOutput.innerHTML = "";
     endOfTheTest.innerHTML = "";
     inputText.value = "";
-    countdownTimer.textContent = restartTime;
 }
