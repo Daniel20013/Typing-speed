@@ -59,6 +59,10 @@ start:active {
     cursor: pointer;
 }
 
+firstOption:active {
+    background-color: var(--button-active-background);
+}
+
 #secoundOption {
     position: absolute;
     top: 15%;
@@ -72,6 +76,10 @@ start:active {
     cursor: pointer;
 }
 
+secoundOption:active {
+    background-color: var(--button-active-background);
+}
+
 #thirdOption {
     position: absolute;
     top: 15%;
@@ -83,6 +91,10 @@ start:active {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+}
+
+thirdOption:active {
+    background-color: var(--button-active-background);
 }
 
 #chooseAnOption {
