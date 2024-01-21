@@ -34,7 +34,7 @@ const testTexts = [
     "High in the mountainous terrain, a hidden alpine meadow unveils its breathtaking panorama. Towering peaks, adorned with snow-capped crowns, stand sentinel against the azure sky. Edelweiss flowers, delicate and rare, peek through the lush grass, adding a touch of purity to the landscape. The crisp mountain air carries the invigorating scent of pine and the distant melodies of alpine wildlife. A winding trail meanders through the meadow, inviting adventurers to explore the rugged beauty. As the sun bathes the scene in a warm glow, the mountains cast long shadows, creating a captivating interplay of light and shadow. Nature's grandeur unfolds in this secluded haven."
 ];
 
-function creatingParagraphsEndTest(text, number) {
+function createParagraphsEndTest(text, number) {
     let paragraphs = document.createElement("p");
     paragraphs.textContent = text + number;
     endOfTheTest.appendChild(paragraphs);
@@ -63,14 +63,14 @@ function stopTheTest() {
     let accuracyWords = wordsPercentage.toFixed(2);
     let keysPercentage = (correctKeys / keysPressed) * 100;
     let accuracyKeys = keysPercentage.toFixed(2);
-    creatingParagraphsEndTest("Accuracy of pressed keys: ", accuracyKeys);
-    creatingParagraphsEndTest("Accuracy of words in percentage: ", accuracyWords);
-    creatingParagraphsEndTest("Keys pressed: ", keysPressed);
-    creatingParagraphsEndTest("Correct keys: ", correctKeys);
-    creatingParagraphsEndTest("Incorrect keys: ", incorrectKeys);
-    creatingParagraphsEndTest("Written words: ", writtenWords);
-    creatingParagraphsEndTest("Correct words: ", correctWords);
-    creatingParagraphsEndTest("Incorrect words: ", incorrectWords);
+    createParagraphsEndTest("Accuracy of pressed keys: ", accuracyKeys);
+    createParagraphsEndTest("Accuracy of words in percentage: ", accuracyWords);
+    createParagraphsEndTest("Keys pressed: ", keysPressed);
+    createParagraphsEndTest("Correct keys: ", correctKeys);
+    createParagraphsEndTest("Incorrect keys: ", incorrectKeys);
+    createParagraphsEndTest("Written words: ", writtenWords);
+    createParagraphsEndTest("Correct words: ", correctWords);
+    createParagraphsEndTest("Incorrect words: ", incorrectWords);
 }
 
 function stopButton() {
